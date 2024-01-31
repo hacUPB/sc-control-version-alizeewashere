@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     if(number < 0)
     {
-        perror("El núnmero debe ser mayor a cero");
+        perror("El número debe ser mayor a cero");
         exit(1);
     }
 
