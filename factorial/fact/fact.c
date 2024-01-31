@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
     if(number < 0)
     {
-        perror("El número debe ser mayor a cero");
-        exit(1);
+        perror("The number must be greater than or equal to zero\n");
+        return(1);
     }
 
     /*Implement the function that calculates the factorial of the input argument*/
