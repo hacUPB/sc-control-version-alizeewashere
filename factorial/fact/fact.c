@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     if(number < 0)
     {
         fprintf(stderr,"The number must be greater than or equal to zero\n");
-        retun(1);
+        return(1);
     }
 
     /*Implement the function that calculates the factorial of the input argument*/
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     }
     
     /*Print the result*/
-    printf("El factorial de %d es %d",number,factorial);
+    fprintf("El factorial de %d es %d",number,factorial);
 
     /*Implement the function that calculates if the argument is a prime number*/
     int count = 0,index = 1;
@@ -42,11 +42,11 @@ int main(int argc, char *argv[]) {
     /*Print the result*/
     if(count == 1)
     {
-        printf("%d es número primo\n",number);
+        fprintf("%d es número primo\n",number);
     }
     else
     {
-        printf("%d no es número primo\n",number);
+        fprintf("%d no es número primo\n",number);
     }
     
     return 0;
