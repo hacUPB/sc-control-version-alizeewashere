@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Print the result */
-    printf("The factorial of %d is: %d\n", number, factorial); // Added newline character
+    printf("The factorial of %d is: %ld\n", number, factorial); // Added newline character
 
     /* Implement the function that calculates if the argument is a prime number */
     int count = 0, index = 1;
