@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 
     /* Print the result */
     if (count == 2) { // Changed the condition to check for exactly 2 divisors (1 and the number itself)
-        printf("%d es número primo\n", number);
+        printf("%d is a prime number", number);
     } else {
         printf("%d is not a prime number", number);
     }
