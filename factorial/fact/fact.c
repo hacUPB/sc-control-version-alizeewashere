@@ -3,51 +3,43 @@
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        fprintf(stderr,"Usage: program <number>\n");
+        fprintf(stderr, "Usage: program <number>\n");
         return 1;
     }
-    
-    int number = atoi(argv[1]); //Convert the console input argument to an integer
-    
-    /*It must be verified that the entered number is greater than or equal to zero*/
 
-    if(number < 0)
-    {
-        fprintf(stderr,"The number must be greater than or equal to zero\n");
-        return(1);
+    int number = atoi(argv[1]); // Convert the console input argument to an integer
+
+    /* It must be verified that the entered number is greater than or equal to zero */
+    if (number < 0) {
+        fprintf(stderr, "The number must be greater than or equal to zero\n");
+        return 1;
     }
 
-    /*Implement the function that calculates the factorial of the input argument*/
+    /* Implement the function that calculates the factorial of the input argument */
     int factorial = 1;
     int b;
-    for (b = number; b > 1; b--)
-    {
+    for (b = number; b > 1; b--) {
         factorial *= b;
     }
-    
-    /*Print the result*/
-    fprintf("El factorial de %d es %d",number,factorial);
 
-    /*Implement the function that calculates if the argument is a prime number*/
-    int count = 0,index = 1;
-    while (index < number)
-    {
-        if(number%index == 0)
-            {
+    /* Print the result */
+    printf("El factorial de %d es %d\n", number, factorial); // Corrected the fprintf to printf
+
+    /* Implement the function that calculates if the argument is a prime number */
+    int count = 0, index = 1;
+    while (index <= number) { // Changed '<' to '<=' to include the number itself
+        if (number % index == 0) {
             count++;
-            }
+        }
         index++;
     }
-    
-    /*Print the result*/
-    if(count == 1)
-    {
-        fprintf("%d es número primo\n",number);
+
+    /* Print the result */
+    if (count == 2) { // Changed the condition to check for exactly 2 divisors (1 and the number itself)
+        printf("%d es número primo\n", number);
+    } else {
+        printf("%d no es número primo\n", number);
     }
-    else
-    {
-        fprintf("%d no es número primo\n",number);
-    }
-    
+
     return 0;
 }
