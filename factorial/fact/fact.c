@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Print the result */
-    printf("El factorial de %d es %d\n", number, factorial); // Corrected the fprintf to printf
+    printf("The factorial of %d is: %d", number, factorial); // Corrected the fprintf to printf
 
     /* Implement the function that calculates if the argument is a prime number */
     int count = 0, index = 1;
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     if (count == 2) { // Changed the condition to check for exactly 2 divisors (1 and the number itself)
         printf("%d es número primo\n", number);
     } else {
-        printf("%d no es número primo\n", number);
+        printf("%d is not a prime number", number);
     }
 
     return 0;
