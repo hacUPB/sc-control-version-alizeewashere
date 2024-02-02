@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         fprintf(stderr, "Usage: program <number>\n");
-        //return 1;
+        return 1;
     }
 
     int number = atoi(argv[1]); // Convert the console input argument to an integer
@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Implement the function that calculates the factorial of the input argument */
-    int factorial = 1;
+    long factorial = 1;
     int b;
     for (b = number; b > 1; b--) {
         factorial *= b;
