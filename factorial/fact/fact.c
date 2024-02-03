@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+    if (argc < 2 || atoi(argv[1]) > 0) {
         fprintf(stderr, "Usage: program <number>\n");
         return 1;
     }
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Print the result */
-    if (count == 2) { // Changed the condition to check for exactly 2 divisors (1 and the number itself)
+    if (count == 2) { 
         printf("%d is a prime number\n", number); // Added newline character
     } else {
         printf("%d is not a prime number\n", number); // Added newline character
